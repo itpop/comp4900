@@ -1,0 +1,120 @@
+/* Playbooks page style */
+body {
+    background: url("../img/main_bg.jpg") no-repeat center #e7e7e7;
+    background-position:top center;
+}
+
+#mainWrapper{
+    max-width:1060px;
+    min-height:600px;
+    margin:0 auto;
+    background:url('../img/content_bg.jpg') no-repeat center top #e7e7e7;
+    overflow:hidden;
+}
+
+#header{
+    width:1060px;
+    height:200px;
+}
+
+#htmlContent {
+    border: black solid 1px;
+    margin-bottom: 50px;
+    height: 600px;
+    width: 800px;
+}
+
+#playTable{
+    min-height: 700px;
+    margin-bottom: 50px;
+}
+
+#playbookHeader {
+    text-align: left;
+    background-color: #e0e0e0;
+    height: 5%;
+    border-bottom: black solid 1px;
+}
+
+#playdrop {
+    background-color: #e0e0e0;
+    border: none;
+    font-weight: bold;
+    height:100%;
+    border-radius:0px;
+}
+
+#playdrop:hover {
+    background-color: white;
+}
+
+#playdrop:focus {
+    background-color: white;
+}
+
+#pdfdrop {
+    background-color: #e0e0e0;
+    border: none;
+    font-weight: bold;
+    height:100%;
+    border-radius:0px;
+}
+
+#pdfdrop:hover {
+    background-color: white;
+}
+
+#pdfdrop:focus {
+    background-color: white;
+}
+
+#playNameDate {
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    border-right: black solid 1px;
+    height: 95%;
+    min-height: 550px;
+    overflow-y: scroll;
+}
+
+#playInfo {
+    background-color: white;
+    height: 95%;
+    min-height: 550px;
+    text-align: none;
+}
+
+#playinfo h3{
+    text-align: center;
+    padding-top: 5px;
+    word-spacing: 10px;
+}
+
+#tbl {
+    vertical-align: top;
+    width: 100%;
+}
+
+#tbl th{
+    padding-left: 10px;
+}
+
+#desc-input {
+    resize: none;
+}
+
+#labelText {
+    word-wrap: break-word;
+}
+
+#canvas{
+    border:1px black solid;
+    width:100%;
+    height: width/1.871;
+}
+
+.row-style {
+    background-color: #ccc;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Football Playbook Online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- KNOCKOUT -->
+  <script src = "http://knockoutjs.com/downloads/knockout-3.4.2.js" ></script>
+  <script src="./FormationItem.js" ></script>
+  <style>
+  img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-height:200px;
+	width:auto;
+  }
+  /*
+	Carousel Reference
+	https://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp
+  */
+  
+  #play-navigation {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+  }
+  
+  
+  /*Hides slide indicators (dots) */
+  .carousel-indicators li { visibility: hidden; }
+  
+	.carousel-playname {
+		text-align: center;
+	}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Play</button>
+	
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">New Play</h4>
+        </div>
+        <div class="modal-body">
+			<div id="defensePlays">
+				<h3>Defense</h3>
+				<div id="defensePlaysCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+			
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" data-bind = " foreach : {data: defensePremiumArray, as: 'defense' }" role="listbox">
+					<div class="item" data-bind="css : { active:  defense.classActive}">					
+					  <img class="modalImg" data-bind="attr : {src: defense.thumbnail}" alt="3-4">
+					  <div>
+						<h4 class="carousel-playname" data-bind="text: defense.playname"></h4>
+					  </div>
+					</div>
+				  </div>
+					
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#defensePlaysCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#defensePlaysCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div><!--defensePlays end-->
+			
+			<div id="offensePlays">
+				<h3>Offense</h3>
+				
+				<div id="offensePlaysCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+				  
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" data-bind = " foreach : {data: offensePremiumArray, as: 'offense' }" role="listbox">
+					<div class="item" data-bind="css : { active:  offense.classActive}">
+					  <img class="modalImg" data-bind="attr : {src: offense.thumbnail}" alt="Blank">
+					  <div>
+						<h4 class="carousel-playname" data-bind="text: offense.playname"></h4>
+					  </div>
+					</div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#offensePlaysCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#offensePlaysCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div><!--offensePlays end-->
+        </div><!--modal-body end-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+        </div>
+      </div><!--modal-content end-->
+      
+    </div><!--modal-dialog end-->
+  </div><!--modal end-->
+  
+</div>
+
+</body>
+</html>

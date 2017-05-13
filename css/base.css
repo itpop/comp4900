@@ -1,0 +1,311 @@
+/* Basic style */
+body {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height:20px;
+    background: url("../img/main_bg.jpg") no-repeat center #e7e7e7;
+    background-position:top center;
+    margin:0;margin-top:0px;padding:0;
+}
+
+#canvasWrapper {
+    padding:0px;
+}
+
+#canvas {
+    border: 5px solid;
+}
+
+#toolbar {
+    overflow: hidden;
+}
+
+#mainWrapper{
+    max-width:1060px;
+    min-height:600px;
+    margin:0 auto;
+    background:url('../img/content_bg.jpg') no-repeat center top #e7e7e7;
+    overflow:hidden;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .75);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .75);
+}
+
+#header {
+    width:1060px;
+    height:200px;
+}
+
+#header-mob {
+    width:600px;
+    height:120px;
+}
+
+#header-right{
+}
+
+#googleAd{
+    width:468px;
+    height:60px;
+}
+
+#information{
+    text-align:left;
+    width:400px;
+    margin:auto;
+    padding-top:160px;
+}
+
+#status {
+    font-weight: bold;
+    height:32px;
+    padding-top:5px;
+    text-align:right;
+    margin-right:100px;
+    font-size:small; 
+    float:right;
+}
+
+#status-mob {
+    font-weight: bold;
+    height:32px;
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align:left;
+    font-size:8pt;
+    float:left;
+}
+
+#facebook {
+    width:350px;
+    margin-left:10px;
+    height:32px;
+    float:left;
+}
+
+#facebook-mob {
+    width:300px;
+    margin-left:10px;
+    height:32px;
+    float:left;
+}
+
+#header-subnav{
+    margin-top:25px;
+    width:640px;
+    text-align:right;
+    height:60px;
+    float:left;
+}
+
+#header-subnav A{
+    color:#000;
+    text-decoration:underline;
+}
+
+#header-navigation {
+    margin-top:20px; 
+    margin-left:10px;
+    float:left;
+}
+
+#nav-contain {
+    height:51px;
+    width:625px;
+    background:url('../img/nav-bg.png') repeat-x;
+    float:left;
+}
+
+.nav-item {
+    color:#BABABA;
+    height:30px;
+    font-size:18px;
+    font-weight:bold;
+    float:left;
+    padding:14px 23px 7px 23px;
+    display:block;
+}
+
+#header-navigation-mob {
+    margin-top:20px; 
+    margin-left:10px;
+    float:left;
+}
+
+#nav-contain-mob {
+    height:45px;
+    width:500px;
+    background:url('../img/nav-bg.png') repeat-x;
+    float:left;
+}
+
+.nav-item-mob {
+    color:#BABABA;
+    height:30px;
+    font-size:12px;
+    font-weight:bold;
+    float:left;
+    padding:14px 23px 7px 23px;
+    display:block;
+}
+
+.nav-item:hover{    
+    text-decoration:underline;
+    display:block;
+}
+
+.nav-selected{
+
+    text-decoration:underline;
+    color:#384E81;
+    display:block;
+}
+
+#fb-root{
+    float:left;
+    width:480px;
+    background-color:blue;
+}
+
+#fb-iframe {
+    margin-left:200px;
+}
+
+#logo {
+    margin-top:30px;
+    margin-left:30px;
+    height:140px;
+    width:300px;
+    float:left;
+}
+
+#logo-mob {
+    margin-top:20px;
+    margin-left:4px;
+    height:47px;
+    width:100px;
+    float:left;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.shapebtn {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.toolbtn{
+    background-image: url("../img/button1.png");
+    background-size: 100% 100%;
+    font-size: 3vmin;
+    font-weight: bolder;
+}
+
+#toolbar {
+    padding: 5px 0px;
+}
+
+.footer {
+    padding-top:4px;
+    text-align: center;
+}
+
+.contentwrap {
+    width:400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentwrap2 {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentwrap ul li { margin:4 0;}
+
+.contentbase {
+    width:100%;
+    text-align:center;
+}
+
+.contentfull {
+    margin:0 auto;
+    margin-bottom:12px;
+    width:90%;
+    padding:10px;
+    overflow:hidden;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.collapse-group {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.panel-title .trigger:before {
+  content: '\e082';
+  font-family: 'Glyphicons Halflings';
+}
+
+.panel-title .trigger.collapsed:before {
+  content: '\e081';
+}
+
+.shape{
+    font-size: 2vmin;
+}
+
+/* Sometimes there will be an error when you post */
+.error
+{
+    color: red;
+}
+
+.msg {
+    color: #95ccff;
+}
+
+.msgok
+{
+    color: green;
+}
+
+/* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
+.smalltext
+{
+    font-size: x-small;
+    color:#365AEE;
+}
+.tinytext
+{
+    font-size: 75%;
+}
+.middletext
+{
+    font-size: 95%;
+}
+.normaltext
+{
+    font-size: small;
+}
+.largetext
+{
+    font-size: large;
+}
+
+.border {
+    background-image: url("../img/button2red.png");
+    background-size: 100% 100%;
+}
+

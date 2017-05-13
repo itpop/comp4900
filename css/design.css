@@ -1,0 +1,55 @@
+/* Design page style */
+.shapebtn {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.toolbtn{
+    background-image: url("../img/button1.png");
+    background-size: 100% 100%;
+    font-size: 3vmin;
+    font-weight: bolder;
+}
+
+#toolbar {
+    padding: 5px 0px;
+}
+
+.colorbtn{
+    background-image: url("../img/button1.png");
+    background-size: 100% 100%;
+    font-size: 2vmin;
+    
+}
+.colorbtn:focus{
+    outline: none;
+}
+.blue {
+    color: #95ccff;
+}
+.gray {
+    color: #424242;
+}
+.yellow {
+    color: #f1f827;
+}
+.white {
+    color: white;
+}
+.red {
+    color: red;
+}
+
+.msg {
+    color: #95ccff;
+}
+
+#playString{
+    resize: none;
+    border: 1px solid black;
+}
+
+#playName{
+    resize: none;
+    border: 1px solid black;
+}
