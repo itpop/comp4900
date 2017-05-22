@@ -1,19 +1,10 @@
+<?php include "top.php"; ?>
 <html>
 <head>
-    <title>Football Playbook Online</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- STYLES -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/carousel.css" />
     <link rel="stylesheet" type="text/css" href="css/qstyle.css" />
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- TETHER FOR BOOTSTRAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- SCRIPTS -->
     <script src="js/jquery.roundabout.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -28,7 +19,7 @@
 <body>
     <div id="mainWrapper">
         <?php include "header.php"; ?>
-        <div class="contentbase">
+        <div class="contentbase contentgap">
           <div class="contentfull"> 
             <div class="home_content">
                 <ul class="roundabout">                
@@ -85,7 +76,7 @@
                 </ul>
             </div> <!-- home-content -->
             <div id="information">
-                <h4>Welcome to Football Playbook Online</h4>
+                <h6><b>Welcome to Football Playbook Online</b></h6>
                 <p>Our software allows you to quickly create and share your plays and drills in multiple sports.  The easy to use, drag and drop interface is available for football. And it's free.  Design a play now!</p>
                 <p> The advertisement free Premium Play Designer opens up a number of additional features such as player tables, different line types, multiple colors for lines and players, and more play templates.  Premium members also have a playbook to access and edit all of your plays in addition to creating PDFs to print play/playbooks. </p>
                 <p><a href="http://footballplaybookonline.com/account.php">Access Premium Features Now!</a></p>

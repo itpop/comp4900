@@ -15,10 +15,11 @@
         if(mysqli_num_rows($result) == 1) {                 
             $row = mysqli_fetch_array($result);
             $userId = $row['ID_MEMBER'];
+            $groupId = $row['ID_GROUP'];
             
             if($userId > 1) {
                 $_SESSION['UserName'] = $username;
-                //$_SESSION['UserId'] = $userId;
+                $_SESSION['GroupId'] = $groupId;
                 echo "<meta http-equiv='refresh' content='0; url=index.php' />";                       
             } else {
                 $fail = true;

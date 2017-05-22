@@ -1,15 +1,14 @@
 /* The main body of the entire forum. */
-body
-{
-    background-color: #000000;
-    margin: 0px;
-    padding: 12px 30px 4px 30px;
-    min-width:850px;
-}
+/*body {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:18px;
+    line-height:20px;
+}*/
 
-input, button
+input
 {
-    font-size: 90%;
+    max-height: 24px;
+    vertical-align: middle;
 }
 
 /* All input elements that are checkboxes or radio buttons. */
@@ -145,10 +144,13 @@ a img
 /* This is used on tables that should just have a border around them. */
 .tborder
 {
-    padding: 1px;
+    padding: 0 10px;
     width:88%;
-    margin:auto;    
+    margin:auto;  
 }
+
+.tinytext tr { line-height: 26px; }
+
 #upshrinkHeader, #upshrinkHeader2
 {
     display:none;
@@ -156,7 +158,16 @@ a img
 #bodyarea{
     margin-top:0px;
 }
-    
+  
+.tdstyle {
+    text-align:left;
+    padding-left:10px;
+    padding-top:10px;
+}
+.tdstyle2{
+    padding-left:10px;
+    padding-top:10px;
+} 
 .regtitle {
     color: #365AEE;
 }
@@ -165,12 +176,17 @@ a img
     padding-top:4px;
 }
 
+.regbtn1 {
+    padding-top:6px;
+    padding-bottom:9px;
+}
+
 .rule {
     width:88%;
     margin-left:auto;
     margin-right:auto;
     text-align:left;
-    padding: 10 3 3 3;
+    padding:10px;
     background-color: #F6F6F6;
 }
 

@@ -25,7 +25,7 @@ body {
 }
 
 #playTable{
-    min-height: 700px;
+    /*min-height: 600px;*/
     margin-bottom: 50px;
 }
 
@@ -33,7 +33,7 @@ body {
     text-align: left;
     background-color: #e0e0e0;
     height: 5%;
-    border-bottom: black solid 1px;
+    border-bottom: #ccc solid 1px;
 }
 
 #playdrop {
@@ -73,8 +73,7 @@ body {
     background-color: white;
     margin: 0px;
     padding: 0px;
-    border-right: black solid 1px;
-    height: 95%;
+    border-right: #ccc solid 1px;
     min-height: 550px;
     overflow-y: scroll;
 }
@@ -115,6 +114,13 @@ body {
     height: width/1.871;
 }
 
-.row-style {
-    background-color: #ccc;
+.zone {
+    /*border: 1px rgba(51,153,0,0.65) solid;*/
+    /*border: 1px inset rgba(51,153,0,0.65);*/
+    border: 1px inset rgba(255,255,255,1.0);
+    padding-bottom:2px;
+}
+
+.playtext {
+    text-align: left;
 }

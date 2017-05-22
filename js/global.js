@@ -1,32 +1,29 @@
 // global.js - global variables & functions
-// NoName group
+// NoName group - Fred Yang
 
 // dimension
 var screenWidth = 1349;
-var nexusWidth = 768;
-var ipadWidth = 1024;
 var canvasInitWidth = 944;
-var canvasSnapWidth = 572;
+var canvasSnapWidth = 571;
 
-// ratio
-var nexusRatio = 0.55;
-var ipadRatio = 0.67;
-var proRatio = 0.90;
+// width-height ratio
 var whRatio = 1.87;
 
 // factors
-var fontFactor = 20;
+var fontFactor = 20.0;
 var gridFactor = 21.0222;
-var dimenFactor = 23.65;
-var marginFactor = 37.84;
-var strokeFactor = 189.20;
 var radiusFactor = 47.30;
-var ovalRadiusFactor = 28;
+var ovalFactor = 28.0;
+var txtFactor = 37.84;
+
+// overlap area radius
+var olRadius = 3;
+
+// Number.EPSILON not working on Safari
+var EPSILON = 0.01;
 
 /**
  * Determine if the browser is mobile based.
- * @author: Fred Yang
- * @date: May 1, 2017
  * @param
  * @return. true if its mobile based browser, false otherwise.
  */
@@ -40,10 +37,19 @@ function checkMobile() {
 }
 
 /**
- * Determine if a string is a Json string.
- * @author: Fred Yang
- * @date: May 1, 2017
+ * Determine if the browser is iOS based.
  * @param
+ * @return. true if its mobile based browser, false otherwise.
+ */
+function checkIOS() {
+    var isIOS = /iPad|iPhone|iPod/i.test(navigator.userAgent);
+    return isIOS;
+}
+
+/**
+ * Determine if a string is a Json string.
+ * @param
+ *   str - the string to be tested
  * @return. true if its a Json string, false otherwise.
  */
 function isJsonString(str) {
@@ -53,4 +59,30 @@ function isJsonString(str) {
         return false;
     }
     return true;
+}
+
+/**
+ * Capitalize the first letter.
+ * @param
+ *  str - the string to be converted
+ * @return. 1st letter capitalized string.
+ */
+function firstUpper(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ * Capitalize the first letter.
+ * @param
+ *   str - the color code
+ * @return. map color code to color string.
+ */
+function getColor(str) {
+    var color = 'white';
+    if (str == '#f1f827') color = 'yellow';
+    else if (str == '#424242') color = 'gray';
+    else if (str == '#95ccff') color = 'blue';
+    else if (str == '#ff0000') color = 'red';
+    else if (str == '#000000') color = 'black';
+    return color;
 }

@@ -1,27 +1,19 @@
 <?php
+    include "top.php";
+    include "global.php";
+
     $number1 = rand(0,9);
     $number2 = rand(0,9);
     $total = $number1 + $number2;
     $mathstr = 'What is '. $number1 . ' + ' . $number2 . '?:';
+    $isMobile = checkMobile();
 ?>
 <html>
 <head>
-    <title>Football Playbook Online</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- TETHER FOR BOOTSTRAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/login.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- SCRIPTS -->
     <script language="JavaScript" type="text/javascript">
         var current_header = false;
         //check email availability
@@ -133,48 +125,59 @@
     <div id="bodyarea" style="padding: 0px 0px 0px 0px;">
         <form action="registerDo.php" method="post" name="regForm" id="regForm" style="margin-top: 4ex;" 
             onsubmit="return validateForm()">
-            <table border="0" width="400" cellspacing="0" cellpadding="4" class="tborder tinytext" align="center">
+            <table border="0" width="400" cellspacing="0" cellpadding="4" class="tborder tinytext">
                 <tr class="titlebg">
-                    <td colspan="2">
+                    <td colspan="2" class="tdstyle">
                         Register - Required Information
                     </td>
                 </tr>
                 <tr class="windowbg">
-                    <td width="40%"><b>Choose username:</b><br>
-                    <span class='regtitle'>Used only for identification by SMF.</span></td>
-                    <td><input type="text" id="username" name="username" size="30" value="" required />
+                    <td width="45%" class="tdstyle"><b>Choose username:</b>
+                    <?php if (!$isMobile) {?>
+                    <br><span class='regtitle'>Used only for identification by SMF.</span>
+                    <?php } ?>
+                    </td>
+                    <td class="tdstyle"><input type="text" id="username" name="username" size="18" value="" required />
                     <span id="userResult" /></td>
                 </tr>
                 <tr class="windowbg">
-                    <td width="40%"><b>Email:</b><br>
-                    <span class='regtitle'>This must be a valid email address.</span></td>
-                    <td><input type="email" id="email" name="email" size="30" value="" required /></td>
+                    <td class="tdstyle"><b>Email:</b>
+                    <?php if (!$isMobile) {?>
+                    <br><span class='regtitle'>This must be a valid email address.</span>
+                    <?php } ?>
+                    </td>
+                    <td class="tdstyle"><input type="email" id="email" name="email" size="18" value="" required /></td>
                 </tr>
                 <tr class="windowbg">
-                    <td width="40%"><b>Choose password:</b><br>
-                    <span class='regtitle'>At least 8 characters, at least 1 upper letter and 1 number. </span></td>
-                    <td><input type="password" id="passwd" name="passwd" size="30" value="" required />
+                    <td class="tdstyle"><b>Choose password:</b>
+                    <?php if (!$isMobile) {?>
+                    <br><span class='regtitle'>At least 8 characters, at least 1 upper letter and 1 number. </span>
+                    <?php } ?>
+                    </td>
+                    <td class="tdstyle"><input type="password" id="passwd" name="passwd" size="18" value="" required />
                     <span id="errPasswd" /></td>
                 </tr>
                 <tr class="windowbg">
-                    <td width="40%"><b>Verify password:</b></td>
-                    <td><input type="password" id="passwd1" name="passwd1" size="30" value="" required />
+                    <td class="tdstyle"><b>Verify password:</b></td>
+                    <td class="tdstyle"><input type="password" id="passwd1" name="passwd1" size="18" value="" required />
                     <span id="errPasswd1" /></td>
                 </tr>
                 <tr class="windowbg">
-                    <td width="40%"><b><?php echo $mathstr; ?></b></td>
-                    <td><input type="text" id="math" name="math" size="30" value="" required />
+                    <td class="tdstyle"><b><?php echo $mathstr; ?></b></td>
+                    <td class="tdstyle"><input type="text" id="math" name="math" size="18" value="" required />
                     <span id="errMath" /></td></td>
                 </tr>
+                <?php if (!$isMobile) {?>
                 <tr class="windowbg">
-                    <td width="40%"><b>Visual verification:</b><br>
-                    <span class='regtitle'>Type the letters shown in the picture.</span></td>
-                    <td>
+                    <td class="tdstyle"><b>Visual verification:</b>
+                    <br><span class='regtitle'>Type the letters shown in the picture.</span>
+                    </td>
+                    <td class="tdstyle">
                         <!-- Replace data-sitekey with your own one, generated at https://www.google.com/recaptcha/admin -->
                         <div class="g-recaptcha" data-sitekey="6Le9tSAUAAAAAMEUd3nLOxQ5s1o4Bs0X276g6zqU"></div>
                     </td>
                 </tr>
-                
+                <?php } ?>
             </table>
             <div style="display:none;">
                 <input type="text" id="total" value="<?php echo $total; ?>" />
@@ -200,8 +203,8 @@
                         <label for="agree">&nbsp;I Agree</label>
                     </div>
                 </div>
-                <div class="regbtn">
-                    <button type="submit" class="btn btn-success">Register</button>
+                <div class="regbtn1">
+                    <button type="submit" class="normalbtn btn-primary">Register</button>
                 </div>
         </form>       
     </div>    

@@ -2,7 +2,11 @@
     include "base.php";
     $playId = 0;
     $playbook = 'Uncategorized';
-    $createdBy = 'NoName';
+    $createdBy = 'admin';
+
+    if(!empty($_SESSION['UserName'])) {
+        $createdBy = $_SESSION['UserName'];
+    }
     
     if (!empty($_POST['playName']) && !empty($_POST['playInfo']) && !empty($_POST['playJson'])) { // save to db
         $playJson = $_POST['playJson']; 

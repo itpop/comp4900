@@ -1,17 +1,9 @@
+<?php include "top.php"; ?>
 <html>
 <head>
-    <title>Football Playbook Online</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- TETHER FOR BOOTSTRAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- STYLES -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <!-- SCRIPTS -->
     <script language="JavaScript" type="text/javascript">
         $(document).ready(function() {
             $(".open-button").on("click", function() {
@@ -29,7 +21,8 @@
     <?php include "header.php"; ?>
         <div class="contentwrap2">
             <!-- Page Features -->
-            <div class="row text-center">
+            <div class="row ">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>FAQs</h2>
                 <div class="collapse-group">
                       <div class="controls">
@@ -133,6 +126,7 @@
                       </div> 
 
                 </div> <!-- collapse-group-->
+                </div>
             </div>
 
              <div class="row text-center">                        
@@ -190,7 +184,7 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                    <input type="submit" class="btn btn-success btn-send" value="Send message">
+                                    <input type="submit" class="btn btn-primary" value="Send message">
                                 </div>
                             </div>                            
                         </div>

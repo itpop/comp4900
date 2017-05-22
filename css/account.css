@@ -1,0 +1,11 @@
+.accWrapper {
+    max-width:400px;
+    padding-top:35px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.acc-style {
+  text-align: left;
+  padding-left:10%;
+}

@@ -13,4 +13,11 @@
     	return preg_match("/(android|phone|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 	}
 
+     // Determine if the browser is iOS based.
+    function checkIOS() {
+        $result = preg_match("/(MSIE|Chrome|Firefox)/i", $_SERVER["HTTP_USER_AGENT"]);
+        if (checkMobile() || $result) return false;
+        return preg_match("/(safari|opera)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
 ?>

@@ -1,18 +1,21 @@
 /* Design page style */
+[draggable=true] {
+    cursor: move;
+}
+
+.btn-basic-2 {
+    height: 96%;
+    padding-top:3px;
+    border-radius: 3px;
+    background-color: #b8e7ed;
+}
+.btn-basic-2:hover {
+    background-color: #95ccff;
+}
+
 .shapebtn {
     width: 2.2em;
     height: 2.2em;
-}
-
-.toolbtn{
-    background-image: url("../img/button1.png");
-    background-size: 100% 100%;
-    font-size: 3vmin;
-    font-weight: bolder;
-}
-
-#toolbar {
-    padding: 5px 0px;
 }
 
 .colorbtn{
@@ -27,6 +30,9 @@
 .blue {
     color: #95ccff;
 }
+.blue2 {
+    color: #0099ff;
+}
 .gray {
     color: #424242;
 }
@@ -39,9 +45,103 @@
 .red {
     color: red;
 }
+.green {
+    color: green;
+}
+.black {
+    color: black;
+}
+
+.blueBck {
+    background-color: #95ccff;
+}
+.grayBck {
+    background-color: #424242;
+}
+.yellowBck {
+    background-color: #f1f827;
+}
+.whiteBck {
+    background-color: white;
+}
+.redBck {
+    background-color: red;
+}
+.blackBck {
+    background-color: black;
+}
+
+.greenBck {
+    background-color: green;
+}
+
+/* select with custom icons */
+.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item-wrapper {
+    padding: 0.5em 0 0.5em 3em;
+}
+.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+    height: 24px;
+    width: 24px;
+    top: 0.1em;
+}
+
+/* select with CSS avatar icons */
+option.avatar {
+    background-repeat: no-repeat !important;
+    padding-left: 20px;
+}
+.avatar .ui-icon {
+    background-position: left top;
+}
 
 .msg {
     color: #95ccff;
+}
+
+.arrow-control {
+    padding-left: 30px;
+}
+
+.carousel-center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.carousel-txt {
+    text-align: center;
+}
+
+.carousel-sect {
+    padding-top:15px;
+    padding-bottom:20px;
+}
+
+.carousel-sect2 {
+    padding-top:15px;
+}
+
+.canvas-normal {
+    padding-left:4%;
+}
+
+.canvas-mob {
+    padding:0;
+}
+
+.textinfo {
+    padding-top:15px;
+    padding-bottom:20px;
+    padding-left:3%;
+    text-align: left;
+}
+
+.textinfo-mob {
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.savetoggle {
+    padding-top:27px;
 }
 
 #playString{
@@ -51,5 +151,147 @@
 
 #playName{
     resize: none;
-    border: 1px solid black;
+    border: 1px #ccc solid;
+}
+
+.custom-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    width: 10em;
+    margin-top: -4em;
+    margin-left:-10.5em;
+}
+
+.custom-menu li {
+    padding: 1 3;
+    text-align:left;
+    cursor: pointer;
+}
+
+.custom-menu li:hover {
+    background-color: #DEF;
+}
+
+.custom-menu-text {
+    top:-5px; 
+    position:relative;
+}
+
+.menu-delete {
+    list-style-image: url('../img/delete.png');
+}
+
+.menu-properties {
+    list-style-image: url('../img/properties.png');
+}
+
+/* The Modal (background) */
+.minimodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 318px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    /*font-family: Courier, Georgia, "Times New Roman", Serif;*/
+    font-size:8pt;
+}
+
+/* Modal Content */
+.minimodal-content {
+    position: relative;
+    /*background-color: rgba(36, 72, 36, 0.7);*/
+    background-color: rgba(36, 72, 36, 0.2);
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    border-radius: 7px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.minimodal-header {
+    padding: 2px 16px;
+    color: white;
+    text-align:left;
+}
+
+.minimodal-body {
+    width:92%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:7px;
+    background-color: #fefefe;
+}
+
+.minimodal-field {
+    text-align:left;
+    padding-left:5px;
+}
+
+.minimodal-row {
+    padding-top:5px;
+}
+
+.minimodal-row1 {
+    padding-bottom:5px;
+}
+
+.minimodal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* The Close Button */
+.miniclose {
+    color: white;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.miniclose:hover,
+.miniclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.label-control {
+    border-radius: 3px;
+    width:90px;
+    border: 1px #ccc solid;
+}
+
+.dialog {
+    margin: 0 auto;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-100px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+select, option {
+    border-radius: 3px;
 }
