@@ -4,6 +4,7 @@
 This readme outlines the steps on how to run the application.
 
 Instruction:
+
     * Canvas :
      - Select a tool at the top, colours on the right are optional
      - Start drawing on the canvas
