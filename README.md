@@ -4,12 +4,8 @@
 This readme outlines the steps on how to run the application.
 
 Instruction:
-<<<<<<< HEAD
-    * Design Page:
-=======
 
-    * Canvas :
->>>>>>> b6c8603520a5f124789974d0e5296ae5dd98dfb2
+    * Design Page:
      - Select a tool at the top, colours on the right are optional
      - Start drawing on the canvas
      - For the shapes it is as simple as clicking on the canvas
